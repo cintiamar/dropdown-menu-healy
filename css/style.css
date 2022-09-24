@@ -1,0 +1,1384 @@
+@import url('https://fonts.googleapis.com/css?family=Karla|Rubik:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,100;1,300;1,400;1,500;1,600&display=swap');
+
+
+@import url('lightbox.min.css');
+
+
+/*@import url('all.css');*/
+@import url(all.min.css);
+@import url(flickity.min.css);
+@import url('responsiveslides.css');
+
+/*allgemeine Formatierunge/////////*/
+
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;  /*box-sizing:border-box + 2 class  .col-3  +  .col-3:last-child FOI A SOLUCAO PARA ALINHAR 3 IMAGENS COM SEUS TEXTOS AUTOMATICAMENTE*/
+}
+
+
+/*
+
+1 - box-sizing:content-box;
+    voreingetellt aber nicht erwünscht...
+     Breite/Höhe wird als inhaltliche Wert behandelt, also für de COntent reserviert.
+    Rahmen und Innenabstände werde dazu addiert. Box wächst unkontrolliert   
+
+2 - box-sizing: border-box; 
+	Breite/Höhe wird als Gesamtbreite-höhe behandelt.
+	Rahmen und Inn werden in der Gesamtbreite dazugeszählt.
+	Gesamtbreite (Rahmen + Innenabstände + COntent) 0 (width:200px)
+	Box lässt sich kontroliert
+
+*/
+
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a{
+text-decoration:none;  /*retira underline do anker*/	
+}
+
+.ankertext{
+color:#440096;
+ -webkit-transition: all 0.2s ease-in-out 0.2s;
+	-moz-transition: all 0.2s ease-in-out  0.2s;
+	-ms-transition: all 0.2s ease-in-out  0.2s;
+	-o-transition: all 0.2s ease-in-out  0.2s;
+	transition: all 0.2s ease-in-out  0.2s;		
+}
+.ankertext:hover{
+color:#f90;	
+color:rgba(255,153,0,0.85);
+text-decoration:underline;
+}
+
+body{
+font-family: 'Roboto', sans-serif;		
+/*font-family:'Karla', sans-serif;*/
+/*/color:#2d2d2d;*/
+color:#39362b;
+}
+
+
+.healyworld{
+		
+font-family:'Karla', sans-serif;
+color:#2d2d2d;
+font-size:18px;
+}
+
+p {
+   /* text-indent: 1em;*/
+   text-align: justify;
+ /*  text-transform: capitalize; /*incia sempre com letra maiuscula*/
+  color:#2d2d2d;	
+   color:rgba(45,45,45,0.9);	/* classe eh fdarkgrau: alterei somente a intensidade para 0.5 */
+  }
+
+ul { /*se nao criar classe para ul, assume todas as listas <ul> assume cor do body: color:#39362b;*/
+  color:#2d2d2d;	
+   color:rgba(45,45,45,0.9);	/* classe eh fdarkgrau: alterei somente a intensidade para 0.5 */  
+}
+
+
+/*Fonte: Quando estiver off line e oC do usuario nao tiver fonte RUBIK, ele procura sans-serif!!!*/
+h1,h2,h3,h4,h5,h6 {
+/*font-family: 'Rubik', sans-serif; */
+font-family: 'Open Sans', sans-serif;
+
+}
+
+h1,h2,h3{
+margin:25px 0; 
+}
+
+.emphasize{
+font-weight:600;	
+}
+
+
+nav{
+font-family: 'Open Sans', sans-serif;		
+
+}
+
+
+#logo{
+font-family: 'Roboto', sans-serif;	
+}
+
+
+
+
+.innerbox{
+	/*border:1px solid #000;*/	
+	/*background-color:#ff0;*/
+	max-width:980px;
+	margin-left:auto;
+	margin-right:auto;
+	overflow:hidden;	
+	}
+
+
+
+.innerbox-section{
+	/*border:1px solid #000;*/	
+	/*background-color:#ff0;*/
+	max-width:980px;
+	margin-left:auto;
+	margin-right:auto;
+	overflow:hidden;	 /*se ativer esconde os bullets da ul */
+	padding-bottom:3em;
+	}
+
+
+/*main_.innerbox  esse espaco vazio diz que o innerbox nao esta no Befehl main MAS DENTRO  /////////////////////  */
+main .innerbox{
+padding:30px 0;
+}	
+
+
+
+
+///////////* Sections allgemein////////*/
+
+
+
+section h1{
+	color:#393626b;
+	text-align: center;
+	font-size:1.875em; /*30px*/
+	/*text-transform:capitalize;*/
+	letter-spacing:2px;
+	font-weight:normal;  /*normal oder 500*/
+	margin-bottom:20px;
+	font-weight:600; /* h2 = open-sans*/
+	margin-top:0;
+
+	
+}
+
+section h2{
+	color:#393626b;
+	text-align: center;
+	font-size:1.875em; /*30px*/	
+	/*text-transform:capitalize;*/
+	letter-spacing:2px;
+	font-weight:normal;  /*normal oder 500*/
+	margin-bottom:20px;
+	font-weight:600; /* h2 = open-sans*/
+	
+}
+
+section h3{
+line-height:18px;	
+color:#393626b;
+font-size:1.5em; /*24px*/
+text-align: left;
+font-weight:normal;  /*normal oder 500*/
+	/*margin-bottom:20px; */
+font-weight:500; /* h2 = open-sans*/
+}
+
+
+
+section h4{
+line-height:18px;	
+color:#393626b;
+font-size:1.255em; /*20px*/
+text-align:left;
+font-weight:normal;  /*normal oder 500*/
+	/*margin-bottom:20px; */
+font-weight:500; /* h2 = open-sans*/
+}
+
+
+section h5{
+line-height:18px;	
+color:#393626b;
+font-size:1.125em; /*18px*/
+text-align:left;
+font-weight:normal;  /*normal oder 500*/
+	/*margin-bottom:20px; */
+font-weight:500; /* h2 = open-sans*/
+}
+
+
+
+
+
+
+
+
+
+
+section p{      /* define espaco entre paragrafos !!!!*/
+line-height:18px;	
+margin:10px 0;
+}
+
+
+section.purple p {
+color:#fff;	
+}
+section.purple h2{
+color:#fff;	
+}
+
+
+
+/*/// OCULTAR TESTEMUNIALS///*/
+/*INDEX//*/
+section#testemunial1{
+display:none;	
+}
+
+/*testemunials galerie - all programs*/
+.main-gallery{
+display:none;		
+}
+
+/
+
+}
+	
+/*////  fim meta-category////*/
+
+/*/////  farbe innerbox///*/
+.weiss{
+background:#fff;
+background:rgba(255,255,255,1);	
+}
+
+.blackyoga{
+background:#39362b;		
+background:rgba(57,54,43,0.7);		
+}
+
+.blackyoga-full{
+background:#39362b;		
+background:rgba(57,54,43,1);		
+}
+
+
+.hellgrau{
+background:#f2f2f2;		
+background:rgba(242,242,242,1);
+}
+
+.helllila{
+background:#cec4d4;		
+background:rgba(206,196,212,1);	
+}
+
+.superhellgrau{
+background:#f9f9f9;		
+background:rgba(249,249,249,1);
+}
+
+
+.menu1gradient{
+ background: linear-gradient(135deg, #8254EA 0%, #E86DEC 100%);
+    -webkit-font-smoothing: antialiased;
+}
+
+.purple{
+background:#440096;		
+background:rgba(68,0,102,1);
+}
+
+.purple-gradient{
+background: linear-gradient(45deg, #00FFFF, #17C8FF 35%, #329BFF, #4C64FF, #6536FF, #8000FF);	
+	
+}
+
+
+round:rgba(33,46,65,1);	
+}
+
+.menu1gradient{
+ background: linear-gradient(135deg, #8254EA 0%, #E86DEC 100%);
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+/*/////  farbe Fonts///*/
+
+
+/*//////////////////divisao de BLOCOS    ///////////*/
+
+.platzhalter{
+background-color:#030282;
+height:50px;
+border:1px solid #000;	
+}
+
+
+.achtel{
+width:81%;
+float:left;	
+margin-right:2%;
+}
+
+.halbe{
+width:49%;
+float:left;	
+margin-right:2%;
+}
+
+.drittel{
+width:32%;
+float:left;	
+margin-right:2%;
+}
+
+.vierfuenftel{
+width:80%;
+float:left;	
+margin-right:2%;	
+}
+
+.dreviertel{
+width:75%;
+float:left;	
+margin-right:2%;	
+}
+
+
+.zweidrittel{
+width:66%;
+float:left;	
+margin-right:2%;	
+}
+
+
+
+
+
+.vierdrittel{
+width:23.5%;
+float:left;	
+margin-right:2%;
+}
+
+.sechstel{
+width:15%;
+float:left;	
+margin-right:2%;
+}
+
+.achtel{
+width:10.75%;
+float:left;	
+margin-right:2%;
+}
+
+.achtel:last-child,
+.halbe:last-child,
+.drittel:last-child,	
+.zweidrittel:last-child,
+.vierdrittel:last-child,
+.sechstel:last-child,
+.achtel:last-child{	
+margin-right:0%;
+}
+
+
+/*/////fim /divisao de BLOCOS    ///////////*/
+
+
+
+/*Header /////////////////////  */
+
+header{
+	/*background-color:#94ff00 !important;*/
+	/*import-Regel ist stärker als alle anderen Regeln*/
+	padding:0px;
+	text-transform:uppercase !important;  /*Großbuchstaben erzwingen   */
+	position:fixed; /*Großbuchstaben erzwingen   */
+	z-index:9999;
+	width:100%;
+	left:0;
+	top:0;
+	}
+
+
+.unterseiten{    /* criamos essa classe no <body> para  deixar uma margem top quando o <header> estah fixo o <h1> do body nao ficar escondido    */
+	margin-top:150px;
+}
+
+/*/// DISCLAIMER + CONTRAINDICATIONS BOXES ////*/
+
+section.disclaimer{
+background:#f9f9f9;		 	  /*superhellgrau*/
+background:rgba(249,249,249,1);
+}
+
+
+.disclaimer .innerbox{
+/*background:#cec4d4;		
+background:rgba(206,196,212,1);*/
+padding:20px 10px;	
+}
+
+section.disclaimer{
+font-family:'Open Sans', sans-serif;
+color:#2d2d2d;
+}
+
+
+.disclaimer .innerbox p{
+line-height:18px;	
+font-size:16px;
+
+}
+
+.disclaimer h3{
+font-size:1.1em;
+margin:10px 0;
+}
+
+.contraindications-box {
+padding:20px 20px;		
+}
+
+.contraindications-box ul{
+list-style-position: inside; /*bullets dentro da lista!! nao fora*/
+}
+
+
+
+
+
+
+
+
+/*/////////end bottom  bnt///////////////////////*/
+
+
+#ribbon{
+position:absolute;
+top:0;
+right:0;	
+z-index:9999; /* z-index + position: fixed deixa essa imagen ribbon fixa  enquanto scroll para baixo  */
+}
+
+
+header:hover #ribbon{  
+-webkit-filter: contrast(1.5);  /* CONTRAST EFFECT:fonte: https://blog.kulturbanause.de/2015/03/css-filter-effekte/*/
+    filter: contrast(1.5);
+}
+a.healymember img{
+    max-width:100px;
+	opacity:0.65;
+    position:absolute;
+	top:0;
+	left:0;	
+	/*z-index:9999; /* z-index + position: fixed deixa essa imagen ribbon fixa  enquanto scroll para baixo  */
+	margin-top:0;
+	display:inline-block;
+	margin-top:10px;
+	float:left;
+    margin-left:120px;  /*margin right no menu2 = 15px tambem!*/	
+}
+	
+
+
+
+#logo{
+	color:#fff;	/**/
+	color:rgba(255,255,255,0.7);	
+	display:inline-block;
+	font-size:2.5em;
+	height:1.55em;
+	padding-top:0.15em;
+	float:left;
+	text-transform: none; /*display letra original minuscula cfe digitado*/
+	margin-left:300px;  /*margin right no menu2 = 15px tambem!*/
+	}
+#logo:hover{
+
+-webkit-filter: contrast(1.5);       /* CONTRAST EFFECT:fonte: https://blog.kulturbanause.de/2015/03/css-filter-effekte/*/
+    filter: contrast(1.5);	
+}
+
+
+#logo span{
+color:#440096;		
+color:rgba(68,0,102,1);
+}
+
+
+#logo #span2{
+color:#fff;		
+color:rgba(255,255,255,1);
+}
+
+
+
+
+
+
+/*/////topborder/////*/
+.topborder{
+height:3px;
+background:#440096;		
+background:rgba(68,0,102,1);
+}
+
+/*/// degrade*/
+.degrade{
+	background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;	
+}
+
+
+
+
+
+/* //////social aside //////////*/
+
+
+.social-squared#social-aside-box li:nth-child(2){ /*INSTAGRAM OCULTAR ATE ALIMENTAR CANAL*/
+display:none;
+}
+
+.social-squared#social-aside-box li:nth-child(3){ /*YOUTUBE OCULTAR ATE DESENVOLVER CANAL*/
+display:none;
+}
+
+
+#social-aside-box{
+	position:fixed;
+	left:1200px;
+	top:50%;
+	margin-top:-61px;	/* vou verificado na imagen o tamanho 45x123px hoch(altura). Logo 50% da altura eh 61px*/	
+	z-index:9999;	 
+	
+}
+
+
+
+.social-squared#social-aside-box li{
+display:block;
+background:#2d2d32;
+background:rgba(45,45,50,1);
+padding:0;
+margin:0; /*distancia EXTERNA  da borda amarela da caixa do icone com a margen da tela, no caso zero, fica encostado da margen*/
+
+}
+
+.social-squared#social-aside-box i{
+font-size:1.2em;
+border-color:#515051;
+border-color:rgba(81,80,81,0.5);	
+color:#fff;
+color:rgba(255,255,255,0.6);
+margin:0.425em;
+padding:12px;
+}
+
+.social-squared#social-aside-box i:hover{ 
+color:#9d38e1;
+color:rgba(157,56,225,1);
+border-color:#9d38e1;
+border-color:rgba(157,56,225,0.5);	
+margin:0.425em;
+padding:12px;
+}
+
+.social-squared#social-aside-box i:hover{ 
+border-radius: 50% 50% 50% 50%; 
+-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+.fa-border-icon{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #2d2d32;
+    border-image: initial;
+    padding: 14%  17% 14% 17%; 
+}
+
+
+
+/*fim social-squared*/
+
+
+
+
+
+
+
+
+
+
+/*///// NAVIGATION/////////////////////////////*/
+
+#navbar{
+  top: 0;
+  width: 100%;
+display:block;
+  transition: top 0.3s;
+   position: fixed;
+}
+
+
+
+/*///// NAV/////////////*/
+nav {
+	
+	text-align:right;
+	margin-top:0px;
+	/*border:1px solid #f0f;*/
+
+}
+
+
+nav ul li {
+list-style-type:none;
+display:inline;	
+
+}
+
+nav ul li a{
+font-size:1.2em;
+margin-left:13px;
+}
+
+
+/*///// NAV MENU1 social////////////*/
+
+nav#menu1 ul#social li:nth-child(2){ /*INSTAGRA OCULTAR ATE ALIMENTAR CANAL*/
+display:none;
+}
+nav#menu1 ul#social li:nth-child(3){ /*YOUTUBE OCULTAR ATE DESENVOLVER CANAL*/
+display:none;
+}
+
+
+
+
+
+nav#menu1{
+font-size:0.9em;   /*enlarge icons menu1 size*/
+width:100%;
+float:right;
+margin-left:0;	
+/*background:rgba(242,242,242,1); /*class hellgrau:so alterei intensidade */ 
+
+}
+
+nav#menu1{
+/*background:rgba(49,235,198,0.95);	*/
+	}
+
+nav#menu1 #social{
+float:right;
+margin-left:0;
+margin-right:25em;
+/*margin-top:1em; */
+}
+
+nav#menu1 ul{
+padding:0.65em;
+}
+
+nav#menu1 #social i{
+/*color:#1b2964;
+color:rgba(27,41,99,1);*/
+color:#fff;
+color:rgba(255,255,255,0.8);
+
+}
+
+nav#menu1 #social i:hover{
+color:#440096;		/*purple*/
+color:rgba(68,0,102,0.3);
+-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+
+
+
+/*///// NAV MENU2////////////*/
+
+
+
+.active1{
+color:#440096!important;	
+font-weight:600;
+text-decoration:underline!important;
+}
+
+.active2{ 
+background:#2a394f!important;
+background:rgba(42,57,79,1);		
+font-weight:600;
+text-decoration:underline!important;
+color:#fff!important;
+color:rgba(255,255,255,0.85)!important;
+}
+
+
+.active3{
+ 
+border:2px solid #2A394F;
+border:rgba(42,57,79,1);		
+font-weight:600;
+text-decoration:underline!important;
+color:#fff!important;
+color:rgba(255,255,255,0.85)!important;
+}
+
+
+
+
+nav#menu2 a.active, button.dropbtn.active{
+border:2px solid #2A394F;	
+border-radius:3px;	
+}
+/* Add a black background color to the top navigation */
+nav#menu2{   /* se nao definir o tamanho do menu2 a classe weiss defi*/
+width:100%; 
+float:right;
+margin-left:0;	
+/*background:rgba(242,242,242,1); /*class hellgrau:so alterei intensidade */ 
+ text-transform:capitalize;  /*catilize: erste Bustabe immer groß, lowercase, uppercase, capitn*/  
+}
+
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+  float:right;    
+  margin-right:100px; /*margin left no LOGO = 15px tambem!*/   
+}
+
+/* Style the links inside the navigation bar */
+.topnav a{
+  float: left;
+  display:inline-block;
+  color:#39362b;
+  color:rgba(57,54,43,1);
+  text-align: center;
+  padding: 8px 8px 12px 8px;   
+  margin-top:8px; 
+  text-decoration: none;
+  font-size: 15px;  
+  margin-right:0px; /* define distancia entre os elementos do menu2*/
+  margin-left: 0px;   /* define distancia entre os elementos do menu2*/
+}
+
+/*//////////////////  OCULTAR LANDING PAGE DO MENU//////////////////*/
+
+.dropdown a#landing{
+	color:transparent;
+}
+
+
+/*//////////////////  fim OCULTAR LANDING PAGE DO MENU//////////////////*/
+
+
+
+
+
+
+/* Add an active class to highlight the current page */
+
+.dropdown a{
+  float: left;
+  display: block;
+color:#39362b;
+color:rgba(57,54,43,1);
+  text-align: center;
+padding: 14px 16px;    
+
+  text-decoration: none;
+  font-size: 15px;  
+  margin-right:10px; /* define distancia entre os elementos do menu2*/
+  margin-left: 10px;   /* define distancia entre os elementos do menu2*/
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size:15.3px;
+  color:#39362b;
+  color:rgba(57,54,43,1);
+  border: none;
+  outline: none;
+  padding: 18px 6px 12px 8px;    
+  margin-right:8px;  
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+ }
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  line-height:8px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+ 
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+   /*padding: 14px 16px;     original */
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  }
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+ font-size:15.3px;
+   font-weight:600;	
+ -webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+
+
+ .topnav a:hover, .dropdown:hover .dropbtn  {
+
+  text-decoration:underline;  
+  
+}
+
+
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+font-size:15.3px;
+  font-weight:600;	
+  text-decoration:underline;
+-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+@media screen and (max-width: 600px) {
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */	
+/*.topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }*/
+  
+
+   .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+
+  }
+  
+  
+  .topnav  a:first-child{
+	display:none;
+	/*background:#f0f;*/
+	  
+  }
+  
+	  
+  
+
+ .topnav a.icon {
+    float: right;
+    display: block;
+	font-size:2.6em;
+	
+  }
+}
+
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+.topnav.responsive {position: relative;}
+
+.topnav#myTopnav.responsive {
+padding-top:4.5em;
+ margin-right:10px; 
+/*background:#f0f; mangenta*/
+width:70%;
+}
+
+.topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+	
+  }
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+	margin-left:0;	
+  }
+.topnav.responsive .dropdown {float: none;}
+.topnav.responsive .dropdown-content {position: relative;}
+.topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+/*hero       /////////     //////////////////   //////////*/
+#hero{
+height:500px;   /* fallback für ältere Browser, welche die Einheit vh nicht verstehen*/
+height:100vh;  /*vh=viewport height=Gerätehöhe wird ausgelesen und als Höhe der Box ausgegeben(Output)/////*/
+background:#f2f2f2;		
+background:rgba(242,242,242,0.7);
+background-image:linear-gradient(to bottom, rgba(2, 0, 36, 0.62), rgba(117, 19, 93, 0.63)),url('../bilder/hero/hero-2.png');
+background-repeat:no-repeat; /*background:repeat(repeat voreingestellt), no-repeat, repeat-x, repeat-y*/
+background-position:center top;  /*Wert1(horizontale) Wert2 (vertikale) vertilen  :   top center bottom */
+background-attachment:fixed;/*scroll (voreingestellt), fixed, hintergrundgrafik wird fixiert und scrollt nicht mit*/
+background-size:cover;
+position:relative;
+
+}
+
+
+#hero a#btn-hero{
+display:block;	
+position:absolute;
+margin-top:4em;	
+position:absolute;
+left:15%; 
+top:70%;  
+transform:translate(0,-50%); /*somente no axis Y !!  */
+color: #fff; /*cor sempre no anker*/
+text-align:center;
+
+	
+}
+
+.btn-hero{	
+	border:2px solid #fff;	
+	display: inline-block; 
+	text-transform: uppercase; 
+	color:#fff;
+	font-weight: 600; 
+	/*background: #393939;*/
+	padding: 0.9em 1.875em; 
+	font-size: 0.8em;
+	letter-spacing: 2px; 	
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn-hero:hover{
+background: linear-gradient(135deg, #8254EA 0%, #E86DEC 100%);
+color:#39262b!important;
+border:transparent; 
+}	
+	
+
+#hero .innerbox{
+ /* border:1px solid #f00;  */ /* para visualizar o espaco */
+  height: 500px;
+  height: 100vh;
+  position:relative;  /*  centralizando o texto do H1*/ 
+}
+
+
+
+#hero h1 {
+font-size:2.8em;	
+line-height:1.1em;  /* line-height vai definir a distancia entre h1 e o spam*/
+position:absolute;   
+left:2%; 
+top:50%;  
+transform:translate(0,-50%); /*somente no axis Y !!  */
+font-weight:500;
+letter-spacing:2px;
+font-family: 'Roboto', sans-serif;		
+color:white;
+}
+
+#hero span#welcome{
+color:white;	
+position:absolute;   
+left:2%; 
+top:42%;  
+transform:translate(0,-50%); /*somente no axis Y !!  */
+}
+
+#hero h1 span#span1 {  /*healy resonance*/
+font-size:0.7em;
+line-height:1.3em;
+color:#ab5eeb; /* ou tom lilas pouco mais escuro color:#8254EA;*/
+font-family: 'Open Sans', sans-serif;
+}
+ 
+
+
+
+#hero h1 span#span2 {  
+font-size:0.4em;
+line-height:0.4em;
+letter-spacing:5px;
+font-weight:normal;  /* retirou o fett, bold do efeito do h1*/
+color:white;
+position:absolute;   
+left:2%; 
+top:55%; 
+}
+  
+ 
+
+
+#hero h1 span#span3{  
+font-size:0.28em;
+line-height:1.75em;
+color:#fff;
+color:rgba(255,255,255,0.8); /*Zeichenabstand*/
+word-spacing:0.25em;
+font-family: 'Open Sans', sans-serif;
+font-weight:400;
+position:absolute;   
+left:1.8%; 
+top:100%; 
+}
+
+
+/*Imprint////*/
+
+#hero-1{
+height:500px;   /* fallback für ältere Browser, welche die Einheit vh nicht verstehen*/
+height:100vh;  /*vh=viewport height=Gerätehöhe wird ausgelesen und als Höhe der Box ausgegeben(Output)/////*/
+background:#f2f2f2;		
+background:rgba(242,242,242,0.7);
+
+background-image:linear-gradient(to bottom, rgba(2, 0, 36, 0.62), rgba(117, 19, 93, 0.63)),url('../bilder/hero/1800x1200-hero-1.png');
+background-repeat:no-repeat; /*background:repeat(repeat voreingestellt), no-repeat, repeat-x, repeat-y*/
+background-position:center center;  /*Wert1(horizontale) Wert2 (vertikale)*/
+
+background-size:cover;
+position:relative;
+}
+/*fim Imprint*/
+
+
+/*////////////////newsletter//////*/
+
+#newsletter{
+	position:fixed;
+	left:0;
+	top:50%;
+	margin-top:-61px;	/* vou verificado na imagen o tamanho 45x123px hoch(altura). Logo 50% da altura eh 61px*/	
+	z-index:9999;
+	 -webkit-transition: all 0.5s ease-in-out; 
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+
+#newsletter:hover{  
+	-webkit-filter: contrast(1.5);       /* CONTRAST EFFECT:fonte: https://blog.kulturbanause.de/2015/03/css-filter-effekte/*/
+    filter: contrast(1.5);
+	
+}
+
+
+
+
+
+
+
+	
+/*2 Breakpoint bis 766px ////////////////////////////////*/
+
+@media only screen and (max-width: 768px) {
+	
+	/*amarelo→#ff0  TABLET   AZUL BIC →#0000ff*/  /* # f00 red*/
+	/*.innerbox, .innerbox-section{
+	border:1px solid #ff0;  
+	} */
+	
+.innerbox-section{
+	/*border:1px solid #000;*/	
+	/*background-color:#ff0;*/
+	max-width:980px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom:1em;	
+	}
+	
+	
+
+
+
+
+
+
+
+/*//////end media breakpoint 600/////////////////////////////*/
+
+
+@media only screen and (max-width: 420px) {
+
+/*.innerbox, .innerbox-section{
+	border:1px solid #f0f;  
+	} */
+
+
+
+footer ul#social-footer li:nth-child(2), footer ul#social-footer li:nth-child(3){ /* 2-INSTAGRA  3- Youtube*/
+display:none!important;
+}
+
+#hero span#welcome{
+display:none;
+}
+
+#hero h1 {
+font-size:2.1em!important;	
+line-height:1.3em;
+}
+
+
+
+#hero h1 span#span1 {  /*healy resonance*/
+font-size:0.38em!important;
+font-weight:500;
+}
+
+#hero h1 span#span3{  
+font-size:0.4em!important;
+line-height:1.7em;
+word-spacing:0.25em; 
+color:black;
+}
+
+/*///////allprograms  schnellifo-02  download  tablet 420px///////////*/
+
+
+
+section#allprograms-schnellinfo-02 p{
+font-size:15px;
+}
+
+
+section#allprograms-schnellinfo-02  a.btn.btn-black{
+padding: 8px 30px; /** aqui o Primeiro Valor do  padding defina a altura do btn -/ o segundo valor a largura do btn*/	
+font-size: 0.7em;
+letter-spacing: 0px;
+font-weight: 500; 
+}
+
+
+
+
+section#allprograms-schnellinfo-02 #pt.btn{
+right:10%;
+-webkit-transform: translateX(-50%); /*absolute mitte when i dont know the witht*/
+transform: translateX(-50%); 
+}
+
+
+section#allprograms-schnellinfo-02 #en.btn{
+display:none;
+}
+
+
+/*///// EDTIONS  chronic-pain ///////////*/	
+section#chronic-pain .halbe{
+width:98%;	
+}
+
+
+section#allprograms-schnellinfo-01 .halbe{
+width:45%;	
+margin-left:2%;
+margin-right:2%;
+}
+
+section#contraindicacoes-slider{
+margin-top:5em!important;	
+}
+
+section#contraindicacoes .meta-category-border{
+margin-top:1em!important;	
+}
+
+
+/*  CONTATO ////////*/
+section#banner-contato{
+margin-top:8em;
+}
+
+@media only screen and (max-width: 320px) {
+
+/*.innerbox, .innerbox-section{
+	border:1px solid #f30;  
+	} */
+
+
+
+#hero span#welcome{
+display:none;
+}
+
+#hero h1 {
+font-size:1.5em!important;	
+line-height:1.5em!important;
+}
+
+
+
+#hero h1 span#span1 {  /*healy resonance*/
+font-size:0.4em!important;
+line-height:0.7em!important;
+color:#fff;
+
+}
+
+#hero h1 span#span3{  
+font-size:0.4em!important;
+line-height:1.7em;
+word-spacing:0.25em; 
+color:black;
+}
+
+
+
+section#allprograms .artikelboxen article.sechstel{   
+
+height:295px!important;  /*ajusta a parte interna do box, a ul  */
+/*background-color:#f0f;	*/
+}
+
+
+section#allprograms .artikelboxen .sechstel.h3line2{  
+height:335px!important;  /* ##### ajusta o box principal, onde tem a borda dos box maiores*/
+
+}
+
+
+
+section#allprograms-schnellinfo-02 #pt.btn{
+left:50%;
+-webkit-transform: translateX(-50%); /*absolute mitte when i dont know the witht*/
+transform: translateX(-50%); 
+}
+
+
+
+footer ul#social-footer li:nth-child(2), footer ul#social-footer li:nth-child(3){ /* 2-INSTAGRA  3- Youtube*/
+display:none!important;
+}
+
+
+
+#hero{
+background-image:linear-gradient(to bottom, rgba(2, 0, 36, 0.62), rgba(117, 19, 93, 0.63)),url('../bilder/hero/mobile/hero3-1280x850-mobile.png')!important;
+background-position:10% 80%;
+}
+
+
+
+/*//// meta-category////*/
+
+.meta-category-border{
+margin-top:8.5em;  /*padrao 4em*/
+}
+
+
+section#contraindicacoes-slider{
+margin-top:8em!important;	
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
